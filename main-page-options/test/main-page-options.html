@@ -1,0 +1,60 @@
+<!--
+coding: utf-8
+Copyright (C) 2015 Sumitrag (www.sumitrag.com)
+Developer: David Proaño <davisxdpfr@gmail.com>
+-->
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>telephone-form</title>
+
+  <script src="../../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../../../../bower_components/web-component-tester/browser.js"></script>
+
+  <script src="../../../../bower_components/test-fixture/test-fixture-mocha.js"></script>
+
+  <link rel="import" href="../../../../bower_components/test-fixture/test-fixture.html">
+  <link rel="import" href="../../../../bower_components/iron-pages/iron-pages.html">
+  <link rel="import" href="../main-page-options.html">
+
+  <link rel="import" href="../../ride-container/ride-container.html">
+
+</head>
+<body>
+<test-fixture id="page">
+  <template>
+    <main-page-options></main-page-options>
+  </template>
+</test-fixture>
+<script>
+  var myPage;
+  var nullError = " no debe ser null";
+  var definedError = " debe estar definido";
+
+  suite('main page options test', function() {
+
+    setup(function() {
+      myPage = fixture('page');
+    });
+
+    test('add model to element', function() {
+      if (myPage) {
+        var model = [{
+          'telefono': '2524158',
+          'tipo': 1
+        }];
+        myPage.model = model;
+        assert.isNotNull(myPage.selected, "El campo selected" + nullError);
+        assert.isDefined(myPage.selected, "El campo selected" + definedError);
+        expect(myPage.selected).to.be.equal(0);
+      }
+    });
+
+
+
+  });
+</script>
+</body>
+</html>

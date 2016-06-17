@@ -1,0 +1,36 @@
+<!--
+coding: utf-8
+Copyright (C) 2015 Sumitrag (www.sumitrag.com)
+Developer: David Proaño <davisxdpfr@gmail.com>
+-->
+<!-- Styles for menu paper tabs  -->
+<dom-module id="menu-tabs-style">
+  <template>
+    <style>
+      :root {
+        /*--paper-toolbar-background: var(--paper-blue-900);*/
+      }
+
+      paper-tabs, paper-toolbar {
+        color: #fff;
+      }
+
+      paper-toolbar paper-tabs {
+        box-shadow: none;
+      }
+
+      paper-tabs[noink][no-bar] paper-tab.iron-selected {
+        color: #ffff8d;
+      }
+
+      paper-tabs[align-bottom] {
+        box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      paper-tabs a {
+        color: #fff;
+      }
+
+    </style>
+  </template>
+</dom-module>

@@ -1,0 +1,48 @@
+<!--
+coding: utf-8
+Copyright (C) 2015 Sumitrag (www.sumitrag.com)
+Developer: David Proaño <davisxdpfr@gmail.com>
+-->
+
+<!-- this element is going to have all the options of the menu to be selected-->
+
+<link rel="import" href="../app/bower_components/polymer/polymer.html">
+<link rel="import" href="../app/bower_components/iron-pages/iron-pages.html">
+<dom-module is="main-page-options">
+  <style>
+    .scrollState {
+      top: 0;
+    }
+
+    #main {
+      height: 100%;
+      overflow: auto;
+      position: absolute;
+    }
+
+  </style>
+  <template>
+    <iron-pages selected="{{selected}}">
+      <div>CARRERAS</div>
+      <div>RASTREO</div>
+      <div>REPORTES</div>
+      <div>CLIENTES</div>
+      <div>RESERVAS</div>
+    </iron-pages>
+  </template>
+  <script>
+    (function() {
+      'use strict';
+      Polymer({
+        is: 'main-page-options',
+        properties: {
+          selected: {
+            type: Number,
+            value: 0,
+            notify: true
+          },
+        }
+      });
+    })();
+  </script>
+</dom-module>
