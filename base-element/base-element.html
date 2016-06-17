@@ -1,0 +1,74 @@
+<!--
+coding: utf-8
+Copyright (C) 2015 Sumitrag (www.sumitrag.com)
+Developer: David Proaño <davisxdpfr@gmail.com>
+-->
+<!--Polymer reference-->
+<link rel="import" href="../app/bower_components/polymer/polymer.html">
+<link rel="import" href="base-element-style.html">
+<link rel="import" href="elements.html">
+<!-- endreplace-->
+
+<dom-module id="base-element" is="dom-bind">
+  <style include="base-element-style"></style>
+  <template id="app">
+    <paper-scroll-header-panel class="scrollable" main fixed>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar">
+        <div class="flex title">{{header}}</div>
+        <div>
+          <menu-tabs selected="{{selected}}"></menu-tabs>
+        </div>
+        <paper-icon-button icon="exit-to-app" on-click="_onExit"></paper-icon-button>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="main-content">
+          <div class="flex-left">
+            <paper-material elevation="2">
+              {{column1}}
+            </paper-material>
+          </div>
+          <div class="flex-main" id="mainArea">
+            <main-page-options id="mainOptions" selected="{{selected}}">
+              <main-area-content></main-area-content>
+            </main-page-options>
+          </div>
+          <div class="flex-right">
+            <paper-material elevation="2">
+              {{column2}}
+            </paper-material>
+          </div>
+        </div>
+      </div>
+
+    </paper-scroll-header-panel>
+  </template>
+  <script>
+    (function() {
+      'use strict';
+      Polymer({
+        is: 'base-element',
+        properties: {
+          header:String,
+          column1:{
+            type:String,
+            value:'Columna 1'
+          },
+          column2:{
+            type:String,
+            value:'Columna 2'
+          },
+          selected: {
+            type: Number,
+            value: 0,
+            notify: true
+          },
+        },
+
+      });
+    })();
+  </script>
+</dom-module>
+

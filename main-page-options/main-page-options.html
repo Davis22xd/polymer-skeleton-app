@@ -23,11 +23,9 @@ Developer: David Proaño <davisxdpfr@gmail.com>
   </style>
   <template>
     <iron-pages selected="{{selected}}">
-      <div>CARRERAS</div>
-      <div>RASTREO</div>
-      <div>REPORTES</div>
-      <div>CLIENTES</div>
-      <div>RESERVAS</div>
+      <template is="dom-repeat" items="{{items}}">
+        <div>[[item.element]]</div>
+      </template>
     </iron-pages>
   </template>
   <script>
@@ -41,6 +39,10 @@ Developer: David Proaño <davisxdpfr@gmail.com>
             value: 0,
             notify: true
           },
+          items: {
+            type:Object,
+            value : function() { return menus; }
+          }
         }
       });
     })();

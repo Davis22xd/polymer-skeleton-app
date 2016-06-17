@@ -1,0 +1,128 @@
+<!--
+coding: utf-8
+Copyright (C) 2015 Sumitrag (www.sumitrag.com)
+Developer: David Proaño <davisxdpfr@gmail.com>
+-->
+<!-- Styles for menu paper tabs  -->
+<dom-module id="base-element-style">
+    <template>
+        <style>
+            /*
+            Polymer includes a shim for CSS Custom Properties that we can use for application theming.
+            Below, you'll find the default palette for the Polymer Starter Kit layout. Feel free to play
+            with changing the colors used or generate your own palette of colours at MaterialPalette.com.
+
+            See https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
+            for further information on custom CSS properties.
+            */
+
+            /* Application theme */
+
+            :root {
+                --dark-primary-color: #009688;
+                --dark-primary-color-mainheader: #526E9C;
+                --default-primary-color: #00BFA5;
+                --light-primary-color: white;
+                --text-primary-color: #ffffff; /*text/icons*/
+                --accent-color: #FF4081;
+                --primary-background-color: white;
+                --primary-background-shadow: #F1EFEF;
+
+                --primary-text-color: #212121;
+                --secondary-text-color: #727272;
+                --disabled-text-color: #bdbdbd;
+                --divider-color: #B6B6B6;
+
+                /* Components header*/
+                --dark-primary-color-secundary-header: #009688;
+                --primary-border-color-header: #00685D;
+
+                /* Texts*/
+                --normal-button-color: lightseagreen;
+                --text-primary-color: white;
+                --dismiss-color: #F44336;
+
+                /*Buttons*/
+                --dissmis-button-background-color: #FFEBEE;
+                --confirm-hover-color: #E0F2F1;
+                --dismiss-hover-color: #FFEBEE;
+
+                /* paper-drawer-panel */
+                --drawer-menu-color: #ffffff;
+                --drawer-border-color: 1px solid #ccc;
+                --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+
+                /* paper-menu */
+                --paper-menu-background-color: #fff;
+                --menu-link-color: #505050;
+
+                /* section header */
+                --section-header-color: #009688;
+
+            }
+
+            /* General styles */
+
+            paper-scroll-header-panel {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: var(--paper-grey-200, #eee);;
+            }
+
+            paper-toolbar {
+                background-color: var(--dark-primary-color-mainheader, #4285f4);
+            }
+
+            paper-toolbar .title {
+                margin: 0 8px;
+            }
+
+            paper-scroll-header-panel .content {
+                padding: 8px;
+                @apply(‑‑layout-flex);
+                @apply(--layout-vertical);
+            }
+
+            paper-scroll-header-panel .content .main-content {
+                @apply(--layout-horizontal);
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            paper-scroll-header-panel .content .footer {
+                @apply(‑‑layout-end);
+                background-color: aqua;
+                position: fixed;
+                width: 100%;
+                height: 20%;
+                bottom: 0;
+            }
+
+            paper-scroll-header-panel .content .main-content .flex-main {
+                @apply(--layout-flex-4);
+            }
+
+            paper-scroll-header-panel .content .main-content .flex-left, paper-scroll-header-panel .content .main-content .flex-right {
+                @apply(--layout-flex);
+            }
+
+            paper-material {
+                margin-top: 15px !important;
+                margin: 1%;
+                background-color: var(--primary-background-color);
+                position: fixed;
+                width: 15%;
+            }
+
+            paper-icon-button {
+                --paper-icon-button-ink-color: white;
+            }
+
+        </style>
+    </template>
+</dom-module>
